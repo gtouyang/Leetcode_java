@@ -1,2 +1,2 @@
 # Leetcode_java
-Some algorithm in leetcode which solve by java
+一些Leetcode上的算法的java例子
