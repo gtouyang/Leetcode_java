@@ -31,8 +31,11 @@ public class Solution {
 
         //回到起点
         p = head;
+
+        //以新链表的第一个结点作为头
         RandomListNode newHead = p.next;
 
+        //将新结点的random指向原节点的random.next，要注意原节点的random是不是null
         while(p != null){
             copy = p.next;
             if (p.random == null){
@@ -46,9 +49,12 @@ public class Solution {
         //回到起点
         p = head;
 
+        //分离两个链表
         while(p != null){
             copy = p.next;
             p.next = copy.next;
+
+            //注意链表最后一个结点时如果访问p.next.next会出错相当于null.next
             if(copy.next != null){
                 copy.next = p.next.next;
             }
