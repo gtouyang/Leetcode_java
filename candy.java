@@ -48,7 +48,7 @@ public class Solution {
     }
 
     //补偿策略
-    //如果前面的孩子比后面的孩子高分而糖果不比他多，则补偿他一颗糖，知道递增结束(即前面的孩子比后面的孩子高分而糖果不比他多这一条件不被满足)
+    //如果前面的孩子比后面的孩子高分而糖果不比他多，则补偿他一颗糖，直到递增结束(即前面的孩子比后面的孩子高分而糖果不比他多这一条件不被满足)
     public void compensate(int[] ratings, int index){
         for(int i = index-1; i >= 0; i--){
             if(ratings[i] > ratings[i+1] && eachCandy[i] <= eachCandy[i+1]){
